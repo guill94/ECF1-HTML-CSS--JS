@@ -816,15 +816,7 @@ flex-basis: 10%;
 .main_connexion div:last-child {
     margin-top: 1em;
 }
-#connectadmin {
-    display: none;
-}
-#connectjury {
-    display: none;
-}
-#connectauteur {
-    display: none;
-}
+
 
 
 @media screen and (max-width: 839px) {
