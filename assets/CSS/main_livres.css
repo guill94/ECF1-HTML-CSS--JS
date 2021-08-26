@@ -1,0 +1,1600 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*NAVIGATION*/
+
+.nav-list {
+    background-color: rgb(24, 25, 110);
+    box-shadow: 0 0 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin: 0rem 0;
+    padding: 1rem;
+}
+
+.nav-item {
+    list-style-type: none;
+    margin: 0.5em 2rem 0.5em 0;
+}
+
+.nav-item a {
+    text-decoration: none;  
+    font-size: 1.2em;
+    background-color: rgb(18, 99, 192); 
+    color: white;
+    padding: 0.3em 0.5em;
+    border-radius: 15px;
+    
+}
+.nav-item:nth-child(1) {
+    margin-right: auto;
+}
+.nav-item a:hover {
+    background-color: yellowgreen;
+    color: black;
+}
+#check {
+    display: none;
+}
+
+
+
+
+ /*GENERAL*/
+html {
+    height: 100%;
+}
+.bgcolor {
+    background-color: rgb(171, 189, 196);
+}
+ .sidebar_index_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(28, 132, 180);
+    box-shadow: 10px 10px 50px;;
+    height: 70%;
+    width:90%;
+    margin: auto;
+    margin-top: 5em;
+    border: 2px solid deepskyblue;
+}
+.sidebar_index_item {
+    list-style-type: none;
+    
+}
+.sidebar_index_item a{
+    text-decoration: none;
+    background-color: rgb(16, 35, 121);
+    padding: 0.5em 2em;
+    text-align: center;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    color:rgb(255, 255, 255);
+    font-size: 1.1em;
+    font-weight: bold;
+}
+.sidebar_index_item a:hover{
+    background-color: royalblue;
+    color: silver;
+}
+footer {
+    grid-area: footer;
+    height: 5em;
+    background-color: rgb(67, 67, 247);
+    margin-top: 2em;
+}
+footer p {
+    position: absolute;
+    right: 2em;
+    margin-top: 1.3em;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+@media screen and (max-width:1620px) {
+  
+    .sidebar_index{
+        grid-area: sidemenu;
+    }
+   
+    .sidebar_index_list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+       height: 60%;  
+       margin-top: 1em;
+       width:100%;
+    }
+    .sidebar_index_list a{
+        font-size: 1em;
+        padding: 0.2em 1em;
+    }
+}
+
+@media screen and (max-width:890px) {
+
+
+    .sidebar_index_list {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 80%;
+        width: 60%;
+    }
+    .sidebar_index_item {
+        margin-bottom: 0.2em;
+    }
+}
+
+
+
+
+
+/*INDEX*/
+
+.index {
+
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    grid-template-rows: 15% 20% 70% 15em;
+    grid-template-areas: "nav nav"
+                         "titre titre"
+                         "sidemenu sideimg"
+                         "footer footer";
+}
+.navbar {
+    grid-area: nav;
+}
+.titleflex {
+    grid-area: titre;
+}
+.titleindex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.sidebar_index {
+    grid-area: sidemenu;
+}
+
+.indexmedia {
+    grid-area: sideimg;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.item_indexmedia {
+    border: solid 3px rgb(89, 89, 238);
+    padding-bottom: 25em;
+    padding-left: 15em;
+    padding-right: 15em;
+}
+.item_indexmedia p {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.indeximg2 {
+    grid-area: footer;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2em;
+
+}
+.indeximg1 img,
+.indeximg2 img {
+    height: auto;
+    width:100%;
+}
+@media screen and (max-width:1220px) {
+    .index {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr .5fr 1fr 3fr 10em;
+        grid-template-areas: "nav"
+                             "titre"
+                             "sidemenu" 
+                             "sideimg"
+                             "footer";
+    }
+    .navbar {
+        grid-area: nav;
+    }
+    .title {
+        grid-area: titre;
+    }
+    .sidebar_index{
+        grid-area: sidemenu;
+    }
+    .indeximg1 {
+        grid-area: sideimg;
+    }
+    .indeximg2 {
+        grid-area: footer;
+    }
+
+}
+
+@media screen and (max-width:890px) {
+    .index {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.8fr .5fr 1.8fr 3fr 10em;
+        grid-template-areas: "nav"
+                             "titre"
+                             "sidemenu" 
+                             "sideimg"
+                             "footer";
+    }
+    body {
+        overflow-x: hidden;
+    }
+    .nav-list {
+        opacity: 0.95;
+        position: absolute;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        transform: translateY(-100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-item {
+        margin: 0.5em 0rem 0.5em 0;
+    }
+    .nav-item:nth-child(1) {
+        margin-right: 0;
+    }
+    .navbar {
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-scroll {
+        cursor: pointer;
+        position: absolute;
+        z-index: 1;
+        right: 2%;
+        top: 3%;
+    }
+    .nav-scroll div {
+        height: 4px;
+        width: 25px;
+        margin-bottom: 3px;
+        background-color: grey;
+    }
+    .nav-active {
+        transform: translateY(0%);
+    }
+
+    .title {
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+
+}
+
+
+
+
+
+
+/*OEUVRES CATEGORIES*/
+
+.oeuvres_cat {
+    display: grid;
+    grid-template-columns: 15% auto;
+    grid-template-rows: 10% 10% 80% 10%;
+    grid-template-areas:  "nav nav"
+                          "titre titre"
+                          "cat main"
+                          "footer footer";
+}
+.sidebar {
+    grid-area: nav;
+    display: flex;
+}
+.title_oeuvres_cat {
+    grid-area: titre;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.oeuvres_cat aside {
+    grid-area: cat;
+    height: 70%;
+}
+.containerbook {
+    grid-area: main;
+    overflow: auto;
+}
+.book_line_list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 1em;
+}
+.book_item {
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+align-items: center;
+flex-basis: 10%;
+}
+@media screen and (max-width: 1620px) {
+    .oeuvres_cat {
+        background-color: rgb(171, 189, 196);
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 5% 8% 25% auto;
+        grid-template-areas:  "nav"
+                              "titre"
+                              "cat" 
+                              "main";
+    }
+    .oeuvres_cat aside {
+        height: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-left: 0;
+        margin-top: 0;
+    }
+}
+
+
+
+
+
+
+/*OEUVRE INDIVIDUELLE*/
+
+.title_oeuvres_ind {
+    grid-area: titre;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.disp_oeuvres_ind {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+}
+.disp_oeuvres_ind p {
+    margin-top: 1em;
+}
+.disp_oeuvres_ind p:nth-child(7) {
+    width:60%;
+}
+.buttonmedia {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2em;
+}
+.buttonmedia div {
+    background-color: blueviolet;
+
+    font-size: 1.2em;
+    margin-left: 3px;
+    padding: 2px 4px;
+    border: solid 2px blue;
+    border-radius: 10px;
+
+}
+.buttonmedia a {
+    text-decoration: none;
+    color: cyan;
+
+}
+.buttonmedia div:hover {
+    background-color: darkorange;
+}
+.buttonmedia img {
+    height: 0.8em;
+    padding-right: 5px;
+}
+@media screen and (max-width: 1200px) {
+    .disp_oeuvres_ind p:last-child {
+        width:85%;
+    }
+}
+
+
+/*HISTORIQUE*/
+
+.historique {
+    background-color: rgb(171, 189, 196);
+    display: grid;
+    grid-template-columns: 15% auto;
+    grid-template-rows: 10% 15% 90% 10%;
+    grid-template-areas:  "nav nav"
+                          "titre titre"
+                          "cat main"
+                          "footer footer";
+}
+.title_historique {
+    grid-area: titre;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  
+}
+.historique aside {
+    grid-area: cat;
+    height: 80%;
+}
+.historique .sidebar_index_item1 a{
+    background-color: rgb(1, 126, 42);
+    color: rgb(32, 32, 32);
+}
+
+.main_historique {
+    grid-area: main;
+    margin-left: 2em;
+}
+.date_historique {
+    list-style-type: none;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.item_date_historique {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.date_historique li,
+.date_historique li p,
+.date_historique li a {
+    margin-right: 1em;
+}
+
+@media screen and (max-width: 1281px) {
+    .historique {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 10% 8% 15% 80% 10%;
+        grid-template-areas:  "nav"
+                              "titre"
+                              "cat"
+                             "main"
+                             "footer";
+    }
+    .historique aside {
+        margin-left:0;
+        margin-top: 1em;
+        padding: 0.3em 0.3em;
+        font-size: 1.4em;
+        height:90%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .historique aside p{
+        padding-right: 0.5em;
+    }
+}
+@media  screen and (max-width: 870px) {
+    .historique {
+        grid-template-columns: auto;
+        grid-template-rows: 10% 8% 15% 90% 10%;
+        grid-template-areas:  "nav"
+                              "titre"
+                              "cat"
+                             "main"
+                             "footer";
+    }
+    .historique aside {
+        height:100%;
+        width: 120%;
+    }
+    .date_historique {
+        flex-wrap: wrap;
+    }
+}
+
+
+
+
+/*RESULT COUNTDOWN*/
+
+.resultcount {
+    background-color: rgb(171, 189, 196);
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 10% 15% 90% 10%;
+    grid-template-areas:  "nav"
+                          "titre"
+                          "main"
+                          "footer";
+}
+.title_resultcount {
+    grid-area: titre;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.container_count {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid blue;
+    border-radius: 10px;
+    width: 70%;
+    margin: 0 auto;
+}
+.title_countdown {
+    font-size: 1.8em;
+    font-weight: bold;
+    color:blue;
+    margin: 2em 0;
+}
+.numbers_count {
+    display: flex;
+    flex-direction: row;
+}
+.bloc_count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 2px solid blue;
+    border-radius: 30px;
+    box-shadow: 5px 5px 15px;
+    margin-right: 1em;
+    height: 4em;
+    width: 4em;
+    font-size: 2em;
+}
+.bloc_count:first-child {
+    margin-left: 1em;
+}
+.days_count:first-child {
+    font-weight: bolder;
+
+}
+.part_countdown {
+    font-size: 2em;
+    margin-top: 15em;   
+    color:rgb(69, 133, 5);
+}
+
+@media screen and (max-width: 1000px) {
+    .resultcount {
+        background-color: rgb(171, 189, 196);
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 10% 15% 90% 10%;
+        grid-template-areas:  "nav"
+                              "titre"
+                              "main"
+                              "footer";
+    }
+    .container_count {
+        grid-area: main;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        border: 0;
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 840px) {
+    .resultcount {
+        background-color: rgb(171, 189, 196);
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 25% 15% 90% 10%;
+        grid-template-areas:  "nav"
+                              "titre"
+                              "main"
+                              "footer";
+    }
+
+}
+
+
+/*RESULTAT*/
+
+.result {
+    display: grid;
+    grid-template-columns: 20% auto;
+    grid-template-rows: 15% 15% 90% 10%;
+    grid-template-areas:  "nav nav"
+                          "titre titre"
+                          "cat main"
+                          "footer footer";
+}
+.title_result {
+    grid-area: titre;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.result aside {
+    grid-area: cat;
+    height: 80%;
+   
+}
+#sidebar_result_item1 {
+    background-color: rgb(1, 126, 42);
+    color: rgb(32, 32, 32);
+}
+#sidebar_result_item2 {
+    background-color: rgb(16, 35, 121);
+    color:rgb(255, 255, 255);
+}
+#idebar_result_item3 {
+    background-color: rgb(16, 35, 121);
+    color:rgb(255, 255, 255);
+}
+#sidebar_result_item4 {
+    background-color: rgb(16, 35, 121);
+    color:rgb(255, 255, 255);
+}
+.main_container_result {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid blue;
+    width:90%;
+    margin: 3em auto;
+}
+#main_result1 {
+    display: run-in;
+}
+#main_result2 {
+    display: none;
+}
+#main_result3 {
+    display: none;
+}
+#main_result4 {
+    display: none;
+}
+.winner_result {
+    font-weight: bold;
+    font-size: 1.8em;
+}
+.img_result {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 3em;
+    align-items: center;
+    justify-content: center;
+}
+.img_result div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 2em;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+.img_result div:last-child {
+    margin-right: 0;
+}
+.resume {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2em;
+}
+.resume div:first-child {
+    margin-right: 2em;
+    margin-left: 2em;
+}
+.resume div:last-child {
+    margin-right: 2em;
+    margin-left: 2em;
+}
+.congrats_result {
+    font-size: 1.2em;
+    font-weight: bolder;
+    margin-top: 1em;
+}
+.part_result {
+    font-size: 1.2em;
+    font-weight: bolder;
+    margin-top: 3em;
+}
+
+@media screen and (max-width: 1200px) {
+    .result {
+        grid-template-columns: auto;
+        grid-template-rows: 15% 15% 15% 90% 10%;
+        grid-template-areas:  "nav"
+                              "titre"
+                              "cat" 
+                              "main"
+                              "footer";
+    }
+    .result aside {
+        
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .result aside p {
+        margin-right: 1em;
+    }
+}
+@media screen and (max-width: 890px) {
+    .result {
+        grid-template-columns: auto;
+        grid-template-rows: 1% 15% 15% 90% 10%;
+        grid-template-areas:  "nav"
+                              "titre"
+                              "cat" 
+                              "main"
+                              "footer";
+    }
+    .result aside {
+        height:100%;
+        display: flex;
+        flex-direction: row;
+
+    }
+    .result aside p {
+        margin-right: 1em;
+    }
+    .main_container_result {
+        border:0;
+    }
+}
+
+/*CONNEXION*/
+
+.connexion {
+    background-color: rgb(171, 189, 196);
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 15% 15% 90% 10%;
+    grid-template-areas:  "nav"
+                          "titre"
+                          "main"
+                          "footer";
+}
+.title_connexion {
+    grid-area: titre;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.main_connexion {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 3px solid blue;
+    border-radius: 10px;
+    background-color: rgb(182, 182, 182);
+    width: 50%;
+    margin: 4em auto;
+    padding: 8em;
+}
+.erreurpw {
+    color: red;
+    font-weight: bold;
+    font-size: 1.3em;
+    display:none;
+}
+.item_connexion:nth-child(4) {
+    margin-top: 1em;
+}
+.main_connexion div:first-child {
+    margin-bottom: 2em;
+}
+.main_connexion div:last-child {
+    margin-top: 1em;
+}
+#connectadmin {
+    display: none;
+}
+#connectjury {
+    display: none;
+}
+#connectauteur {
+    display: none;
+}
+
+
+@media screen and (max-width: 839px) {
+    .connexion {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 4.0% 30% 90% 10%;
+        grid-template-areas:  "nav"
+                              "titre"
+                              "main"
+                              "footer";
+    }
+    .main_connexion {
+        padding: 3em;
+    }
+    
+}
+
+
+
+
+/*REGLEMENT*/
+
+.pageh {
+    height: 1vh;
+}
+.reglement {
+    background-color: rgb(171, 189, 196);
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 20% 20% 100% 10%;
+    grid-template-areas:  "nav"
+                          "titre"
+                          "main"
+                          "footer";
+}
+.title_reglement {
+    grid-area: titre;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.main_reglement {
+    grid-area: main;
+    width: 80%;
+    margin: 2em auto;
+}
+
+
+
+
+/*INSCRIPTION JURY*/
+
+.inscription_jury {
+    background-color: rgb(171, 189, 196);
+    display: grid;
+    grid-template-columns: 20% 20% auto;
+    grid-template-rows: 20% 20% 90% 20% 20% 10%;
+    grid-template-areas:  "nav nav nav"
+                          "titre titre titre"
+                          "upload info message"
+                          "reglement reglement reglement"
+                          "button button button"
+                          "footer footer footer";
+}
+.title_inscription_jury {
+    grid-area: titre;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.upload_inscription_jury {
+    grid-area: upload;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.info_inscription_jury {
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.message_inscription_jury {
+    grid-area: message;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.reglement_inscription_jury {
+    grid-area: reglement;
+    text-align: center;
+}
+.button_inscription_jury {
+    grid-area: button;
+    text-align: center;
+}
+
+@media screen and (max-width: 1550px) {
+    .inscription_jury {
+        grid-template-columns: auto;
+        grid-template-rows: 20% 20% 30% 50% 50% 20% 20% 10%;
+        grid-template-areas:  "nav"
+                              "titre"
+                              "upload" 
+                              "info" 
+                              "message"
+                              "reglement"
+                              "button"
+                              "footer";
+    }
+}
+@media screen and (max-width: 860px) {
+
+    .upload_inscription_jury {
+        font-size: 2em;
+    }
+    .info_inscription_jury {
+        font-size: 2em;
+    }
+    .message_inscription_jury {
+        font-size: 2em;
+    }
+    .reglement_inscription_jury {
+        font-size: 2em;
+    }
+    .button_inscription_jury {
+        font-size: 2em;
+    }
+}
+
+
+
+
+/*INSCRIPTION AUTEUR*/
+
+.inscription_auteur {
+    background-color: rgb(171, 189, 196);
+    display: grid;
+    grid-template-columns: 40% auto;
+    grid-template-rows: 10% 15% 15% 15% 70% 10% 10% 10%;
+    grid-template-areas:  "nav nav"
+                          "titre titre"
+                          "link link"
+                          "subtitre1 subtitre1"
+                          "info message"
+                          "reglement reglement"
+                          "button button"
+                          "footer footer";
+}
+.title_inscription_auteur {
+    grid-area: titre;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.subtitle_inscription_auteur {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 3%;
+}
+.inscription_jury_link {
+    grid-area: link;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.subauteur1 {
+    grid-area: subtitre1;
+}
+.info_inscription_auteur {
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.message_inscription_auteur {
+    grid-area: message;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding-right: 5%;
+}
+
+.subauteur2 {
+    grid-area: subtitre2;
+}
+.livre_inscription_auteur {
+    grid-area: livre;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.synopsis_inscription_auteur {
+    grid-area: synopsis;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding-right: 5%;
+}
+.reglement_inscription_auteur {
+    grid-area: reglement;
+    text-align: center;
+}
+.button_inscription_auteur {
+    grid-area: button;
+    text-align: center;
+}
+
+@media  screen and (max-width:1200px) {
+    .inscription_auteur {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 10% 10% 10% 10% 30% 50% 5% 5%;
+        grid-template-areas:  "nav"
+                              "titre"
+                              "link"
+                              "subtitre1"
+                              "info" 
+                              "message"
+                              "reglement"
+                              "button";
+    }
+    .message_inscription_auteur {
+        padding-right: 0%;
+    }
+        .synopsis_inscription_auteur {
+            padding-right: 0%;
+        }
+}
+@media  screen and (max-width:863px) {
+    .inscription_auteur {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 10% 10% 10% 15% 50% 50% 8% 5%;
+        grid-template-areas:  "nav"
+                              "titre"
+                              "link"
+                              "subtitre1"
+                              "info" 
+                              "message"
+                              "reglement"
+                              "button";
+    }
+    .subtitle_inscription_auteur {
+        font-size: 2.2em;
+    }
+    .message_inscription_auteur {
+        padding-right: 1%;
+        padding-left: 1%;
+    }
+        .synopsis_inscription_auteur {
+            padding-right: 0%;
+    }
+    .info_inscription_auteur{
+        font-size: 2em;
+    }
+    .message_inscription_auteur {
+        font-size: 2em;
+    }
+    .livre_inscription_auteur{
+        font-size: 2em;
+    }
+    .synopsis_inscription_auteur {
+        font-size: 2em;
+    }
+    .reglement_inscription_auteur {
+        font-size: 2em;
+    }
+    .button_inscription_auteur {
+        font-size: 2em;
+    }
+}
+
+
+
+
+/*ESPACE AUTEUR*/
+
+.espace_auteur {
+    background-color: rgb(171, 189, 196);
+    display: grid;
+    grid-template-columns: 30% auto;
+    grid-template-rows: 10% 10% 10% 40% 10% 30% 15% 40% 6% 6% 10%;
+    grid-template-areas:  "nav nav"
+                          "titre titre"
+                          "subtitre1 subtitre1"
+                          "info bio"
+                          "subtitre2 subtitre2"
+                          "livres livres"
+                          "subtitre3 subtitre3"
+                          "addbook synopsis"
+                          "reglement reglement"
+                          "button button"
+                          "footer footer";
+}
+.title_espace_auteur {
+    grid-area: titre;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.subtitle_espace_auteur {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 3%;
+}
+.subespaceauteur1 {
+    grid-area: subtitre1;
+}
+.info_espace_auteur {
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.bio_espace_auteur {
+    grid-area: bio;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.subespaceauteur2 {
+    grid-area: subtitre2;
+}
+.containerbook_auteur {
+    grid-area: livres;
+
+}
+.book_line_list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 1em;
+}
+.book_item_auteur {
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+align-items: center;
+flex-basis: 10%;
+}
+
+
+
+
+
+.subespaceauteur3 {
+    grid-area: subtitre3;
+}
+.livre_espace_auteur {
+    grid-area: addbook;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+.synopsis_espace_auteur {
+    grid-area: synopsis;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 15%;
+}
+.reglement_espace_auteur {
+    grid-area: reglement;
+    text-align: center;
+}
+.button_espace_auteur {
+    grid-area: button;
+    text-align: center;
+}
+
+@media  screen and (max-width: 1200px) {
+    .espace_auteur {
+        background-color: rgb(171, 189, 196);
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 10% 5% 5% 30% 20% 10% 20% 10% 30% 30% 10% 10% 10%;
+        grid-template-areas:  "nav"
+                              "titre"
+                              "subtitre1"
+                              "info"
+                              "bio"
+                              "subtitre2"
+                              "livres"
+                              "subtitre3"
+                              "addbook" 
+                              "synopsis"
+                              "reglement"
+                              "button"
+                              "footer";
+    }
+    .livre_espace_auteur {
+        align-items: center;
+    }
+    .synopsis_espace_auteur {
+        padding-left: 0%;
+    }
+}
+
+
+
+
+/*ESPACE JURY*/
+
+.espace_jury {
+    background-color: rgb(171, 189, 196);
+    display: grid;
+    grid-template-columns: 20% 30% auto;
+    grid-template-rows: 5% 10% 5% 30% 10% 40% 10% 40% 10%;
+    grid-template-areas:  "nav nav nav"
+                          "titre titre titre"
+                          "subtitre1 subtitre1 subtitre2"
+                          "info info cat"
+                          "selectCat titlebook1 titlebook1"
+                          "selectCat book1 book1"
+                          "selectCat titlebook2 titlebook2"
+                          "selectCat  book2 book2"
+                          "footer footer footer";
+}
+.sidebar {
+    grid-area: nav;
+    display: flex;
+}
+.title_oeuvres_cat {
+    grid-area: titre;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.select_cat {
+    grid-area: cat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.select_cat p {
+    font-size: 1.5em;
+}
+.categ_eval {
+    margin-bottom: 0.8em;
+    margin-top: 1.5em;
+}
+.espace_jury aside {
+    grid-area: selectCat;
+    height: 70%;
+}
+.compare_jury {
+    grid-area: compare;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 5%;
+    width: 90%;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 1em auto;
+    padding: 0 0.5em;
+    border: solid 2px rgb(0, 162, 255);
+    background-color: rgb(1, 140, 253);
+    border-radius: 10px;
+}
+.compare_jury:hover {
+    background-color: rgb(18, 179, 207);
+    cursor: pointer;
+}
+.title_container1 {
+    grid-area: titlebook1;
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 6em;
+}
+.title_container2 {
+    grid-area: titlebook2;
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 6em;
+}
+.containerbook_marked {
+    grid-area: book1;
+    overflow: auto;
+}
+.containerbook_unmarked {
+    grid-area: book2;
+    overflow: auto;
+}
+.book_line_list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 1em;
+}
+.book_item {
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+align-items: center;
+flex-basis: 10%;
+}
+@media screen and (max-width: 1300px) {
+    .espace_jury {
+        display: grid;
+        grid-template-columns: auto;
+    grid-template-rows: 10% 10% 10% 30% 10% 20% 30% 10% 40% 10% 40% 10%;
+    grid-template-areas:  "nav"
+                          "titre"
+                          "subtitre1"
+                          "info"
+                          "subtitre2"
+                          "cat"
+                          "selectCat"
+                          "titlebook1"
+                          "book1"
+                          "titlebook2"
+                          "book2"
+                          "footer";
+    }
+    .espace_jury aside {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+       
+    }
+    .espace_jury aside p {
+        margin-left: 0.5em;
+    }
+}
+
+
+
+/*ESAPCE ADMIN*/
+
+.espace_admin {
+    background-color: rgb(171, 189, 196);
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 7% 7% 40% 40% 10% 10%;
+    grid-template-areas:  "nav nav"
+                          "titre titre"
+                          "aside1 aside2"
+                          "aside3 aside4"
+                          "button button"
+                          "stats stats";
+}
+
+.title_espace_admin {
+    grid-area: titre;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.espace_admin aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    margin: 1em auto;
+    padding: 0.3em 0.3em;
+    font-size: 1.4em;
+    border: 5px solid blue;
+    box-shadow: 10px 10px 10px;
+    height:98%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: blanchedalmond;
+}
+
+.espace_admin aside a {
+    color: burlywood;
+    text-decoration: none;
+}
+.espace_admin aside p {
+    margin-top: 0.5em;
+}
+.espace_admin_aside1 {
+    grid-area: aside1;
+}
+.espace_admin_aside2 {
+    grid-area: aside2;
+}
+.espace_admin_aside3 {
+    grid-area: aside3;
+}
+.espace_admin_aside4 {
+    grid-area: aside4;
+}
+.espace_admin_stats {
+    grid-area: stats;
+    width: 98%;
+    margin: 2em auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border: solid 3px black;
+    margin-bottom: 2em;
+}
+.espace_admin_stats p {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.valid_button {
+    grid-area: button;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 1.5em;
+    margin-top: 2em;
+}
+
+@media screen and (max-width: 1200px) {
+    .espace_admin {
+        background-color: rgb(171, 189, 196);
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 2% 4% 30% 30% 30% 30% 8%;
+        grid-template-areas:  "nav"
+                              "titre"
+                              "aside1" 
+                              "aside2"
+                              "aside3" 
+                              "aside4"
+                              "stats";
+    }
+    .espace_admin_stats {
+        flex-direction: column;
+    }
+}  
+
+
+
+
+
+/*OEUVRE NON NOTEE & OEUVRE NOTEE*/
+
+.oeuvre_non_note {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 20% 50% 40% 10% 40% 10%;
+    grid-template-areas:  "nav"
+                          "top_title"
+                          "text1"
+                          "button"
+                          "grades"
+                          "footer";
+}
+.img_title {
+    grid-area: top_title;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 20%;
+}
+.img_title div:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1em;
+}
+.resume_note {
+    grid-area: text1;
+    display: flex;
+    flex-direction: column;
+    margin: 0 20em;
+}
+.resume_note div:first-child {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+.button_note {
+    grid-area: button;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.form_note {
+    grid-area: grades;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.last_form_note {
+    font-weight: bold;
+}
+
+
+
+
+
+/*COMPARE NOTE*/
+
+.compare_note {
+    display: grid;
+    grid-template-columns: 20% auto;
+    grid-template-rows: 12% 80% 10%;
+    grid-template-areas:  "nav nav"
+                          "categories livres_notes"
+                          "footer footer";
+}
+.compare_note aside{
+    grid-area: categories;
+    height: 70%;
+}
+.container_livres_notes {
+    grid-area: livres_notes;
+    
+    overflow: auto;
+}
+.livres_notes {
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 1em;
+}

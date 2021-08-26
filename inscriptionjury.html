@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/CSS/main_livres.css">
+    <title>Inscription Jury</title>
+</head>
+<body class="inscription_jury">
+    <div class="nav-scroll">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+    <nav class="navbar">  
+        <ul class="nav-list">
+            <li class="nav-item"><a href="index.html">Accueil</a></li>
+            <li class="nav-item"><a href="resultcount.html">Résultat</a></li>
+            <li class="nav-item"><a href="historique.html">Historique</a></li>
+            <li class="nav-item"><a href="reglement.html">Réglement</a></li>
+            <li class="nav-item"><a href="inscriptionauteur.html">Inscription</a></li>
+            <li class="nav-item"><a href="connexion.html">Login Espace Personnel</a></li>
+        </ul>
+    </nav>
+
+    <div class="title_inscription_jury"><h1>Inscription Jury</h1></div>
+
+    <div class="upload_inscription_jury">
+        <p class="upload_item_inscription_jury">
+            <label>
+                Votre carte d'identité nationale :
+            </label>
+            <input type="submit" value=" Téléverser CI " id="button1" />
+        </p>
+        <p class="upload_item_inscription_jury">
+            <label>
+                Votre CV :
+            </label>
+            <input type="submit" value=" Téléverser CV " id="button2" />
+        </p>
+        <p class="upload_item_inscription_jury">
+            <label>
+                Votre lettre de motivation :
+            </label>
+            <input type="submit" value=" Téléverser LM " id="button3" />
+        </p>
+    </div>
+
+    <div class="info_inscription_jury">
+        <p class="item_info_inscription_jury">
+            Nom* :
+				<input type="text" name="le_nom" placeholder="Nom" id="nom" required />
+        </p>
+        <p class="item_info_inscription_jury">
+            * Prénom :
+            <input type="text" name="le_prenom" placeholder="Prénom" id="prenom" required />
+        </p>	
+        <p class="item_info_inscription_jury">
+            * E-mail :
+            <input type="text" name="email" id="mail" required />
+        </p>			
+        <p class="item_info_inscription_jury">
+            Date de naissance* :
+            <input type="text" name="le_prenom" id="birth" required/>
+        </p>
+        <p class="item_info_inscription_jury">
+            Adresse :
+            <input type="text" name="adresse" id="adresse" />
+        </p>	
+        <p class="item_info_inscription_jury">
+            Ville* :
+            <input type="text" name="ville" id="ville" required/>
+        </p>		
+        <p class="item_info_inscription_jury">
+            Code postal* :
+            <input type="text" name="postal" id="postal" required/>
+        </p>
+        <p class="item_info_inscription_jury">
+            <span>
+                <input type="radio" name="sexe" value="homme" /> Homme
+                <input type="radio" name="sexe" value="femme" /> Femme
+                <input type="radio" name="sexe" value="femme" /> Autre
+            </span>
+        </p>
+    </div>
+
+    <div class="message_inscription_jury">
+        <textarea placeholder=" Votre message" rows="20" cols="110" ></textarea>
+    </div>
+
+    <div class="reglement_inscription_jury">
+        <input type="checkbox" name="sexe" value="homme" required/> Je déclare avoir pris connaissance du <a href="reglement.html">réglement</a> et accepter celui-ci.
+    </div>
+
+    <div class="button_inscription_jury">
+        <p>
+            <input type="submit" value="Valider" id="button4" /> <!--Envoie à la BDD et ajoute une nouvelle inscription sur la page Admin-->
+            <input type="reset" value="Annuler" id="button5" /> 
+        </p>
+    </div>
+    <footer>
+        <p>Site Biblio - Guillaume BURGNIES - 2021</p>
+    </footer>
+    <script src="assets/JS/menu.js"></script> 
+</body>
+</html>

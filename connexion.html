@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/CSS/main_livres.css">
+    <title>Document</title>
+</head>
+<body class="connexion">
+    <div class="nav-scroll">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+    <nav class="navbar">  
+        <ul class="nav-list">
+            <li class="nav-item"><a href="index.html">Accueil</a></li>
+            <li class="nav-item"><a href="resultcount.html">Résultat</a></li>
+            <li class="nav-item"><a href="historique.html">Historique</a></li>
+            <li class="nav-item"><a href="reglement.html">Réglement</a></li>
+            <li class="nav-item"><a href="inscriptionauteur.html">Inscription</a></li>
+            <li class="nav-item"><a href="connexion.html">Login Espace Personnel</a></li>
+        </ul>
+    </nav>
+
+    <div class="title_connexion"><h1>Concours de livres</h1></div>
+
+    <div class="main_connexion">
+        <div class="item_connextion"><h3>Page de connexion</h3></div>
+        <div class="item_connexion">
+            <p>
+				Identifiant :
+				<input type="text" name="pseudo" placeholder="Pseudo" id="identifiant" required />
+			</p>
+        </div>
+        <div class="item_connexion">
+            <p>
+				Mot de passe :
+				<input type="password" name="password" placeholder="Mot de passe" id="password" required />
+			</p>
+        </div>
+        <div class="item_connexion">
+            <p>
+				<input type="submit" value="Connexion" name="connect" id="connect"/>
+			</p>
+        </div>
+
+        <!--Possibilité d'accéder à la page de changement de mot de passe (1ere connexion) en entrant comme identifiant & MdP soit admin, jury ou auteur. Puis cliquer sur connexion (Système pour accéder aux pages étant donnée l'absence BDD)
+        Exemple : si j'entre admin en identifiant et admin en MdP j'arrive sur la page de changement de mot de passe-->
+
+        <div class="item_connexion">
+          
+			<div id="connectadmin"><a href="espaceadmin.html">Espace Admin</a></div>
+			
+        </div>
+        <div class="item_connexion">
+            
+			<div id="connectjury"><a href="espacejury.html">Espace Jury</a></div>
+			
+        </div>
+        <div class="item_connexion">
+            
+			<div id="connectauteur"><a href="espaceauteur.html">Espace Auteur</a></div>
+		
+        </div>
+        <div class="item_connexion"><a href="">Mot de passe oublié</a></div>
+    </div>
+    <script src="assets/JS/menu.js"></script> 
+    <script src="assets/JS/connexion.js"></script> 
+</body>
+</html>

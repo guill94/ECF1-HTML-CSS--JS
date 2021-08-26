@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<livre_liste>
+
+	<livre>
+		<titre>
+		     Titre
+		</titre>
+		
+		<auteurs>
+			<auteur>
+                Auteur 1
+            </auteur>
+            <auteur>
+                Auteur 2
+            </auteur>
+		</auteurs>
+
+        <categorie>
+            Catégorie
+        </categorie>
+		<resume>
+            Résumé
+        </resume>
+		<annee>
+			2005
+		</annee>
+
+        <ISBN>
+            ISBN
+        </ISBN>
+		
+        <note>
+            <note_style>
+                5/10
+            </note_style>
+            <note_illustrations>
+                5/10
+            </note_illustrations>
+            <note_mise_page>
+                5/10
+            </note_mise_page>
+            <note_emotion>
+                5/10
+            </note_emotion>
+            <note_generale>
+                5/10
+            </note_generale>
+        </note>
+	
+	</livre>
+
+	<livre>
+		<titre>
+		     Titre
+		</titre>
+		
+		<auteurs>
+			<auteur>
+                Auteur
+            </auteur>
+		</auteurs>
+
+        <categorie>
+            Catégorie
+        </categorie>
+		<resume>
+            Résumé
+        </resume>
+		<annee>
+			2005
+		</annee>
+
+        <ISBN>
+            ISBN
+        </ISBN>
+		
+        <note>
+            <note_style>
+                5/10
+            </note_style>
+            <note_illustrations>
+                5/10
+            </note_illustrations>
+            <note_mise_page>
+                5/10
+            </note_mise_page>
+            <note_emotion>
+                5/10
+            </note_emotion>
+            <note_generale>
+                5/10
+            </note_generale>
+        </note>
+	
+	</livre>
+	
+</livre_liste>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/CSS/main_livres.css">
+    <title>Temps restant</title>
+</head>
+<body class="resultcount">
+
+    <div class="nav-scroll">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+    <nav class="navbar">  
+        <ul class="nav-list">
+            <li class="nav-item"><a href="index.html">Accueil</a></li>
+            <li class="nav-item"><a href="resultat.html">Résultat</a></li>
+            <li class="nav-item"><a href="historique.html">Historique</a></li>
+            <li class="nav-item"><a href="reglement.html">Réglement</a></li>
+            <li class="nav-item"><a href="inscriptionauteur.html">Inscription</a></li>
+            <li class="nav-item"><a href="connexion.html">Login Espace Personnel</a></li>
+        </ul>
+    </nav>
+
+    <!--Possibilité d'afficher la page du résultat final en cliquant sur l'onglet "Résultat" depuis cette même page-->
+
+    <div class="title_resultcount"><h1>Concours de livres</h1></div>
+
+    <div class="container_count">
+
+        <div class="title_countdown">Le concours se termine dans :</div>
+
+        <div class="numbers_count" id="countdown" data-time="2021-11-22T07:00:00+0000">
+            <div class="bloc_count">  
+               <strong id="days_count"></strong>
+               <em class="text_count">Jours</em> 
+            </div>
+            <div class="bloc_count"> 
+                <strong id="hours_count"></strong> 
+                <em class="text_count">Heures</em> 
+            </div>
+            <div class="bloc_count"> 
+                <strong id="minutes_count"></strong>
+                <em class="text_count">Minutes</em> 
+            </div>
+            <div class="bloc_count">  
+                <strong id="seconds_count"></strong>
+                <em class="text_count">Secondes</em> 
+            </div>
+        </div>
+
+        <div class="part_countdown">Nombre de participants : XX</div>
+
+    </div>
+    <footer>
+        <p>Site Biblio - Guillaume BURGNIES - 2021</p>
+    </footer>
+    <script src="assets/JS/menu.js"></script> 
+    <script src="assets/JS/countdown.js"></script>
+</body>
+</html>

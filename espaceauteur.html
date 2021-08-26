@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/CSS/main_livres.css">
+    <title>Espace Auteur</title>
+</head>
+<body class="espace_auteur">
+
+    <div class="nav-scroll">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+    <nav class="navbar">  
+        <ul class="nav-list">
+            <li class="nav-item"><a href="index.html">Accueil</a></li>
+            <li class="nav-item"><a href="resultcount.html">Résultat</a></li>
+            <li class="nav-item"><a href="historique.html">Historique</a></li>
+            <li class="nav-item"><a href="reglement.html">Réglement</a></li>
+            <li class="nav-item"><a href="inscriptionauteur.html">Inscription</a></li>
+            <li class="nav-item"><a href="connexion.html">Marie Blanc : Déconnexion</a></li>
+        </ul>
+    </nav>
+	
+	<div class="title_espace_auteur"><h1>Bienvenue sur l'espace auteur </h1></div>
+	
+    <div class="subtitle_espace_auteur subespaceauteur1"><h3>Vos coordonnées</h3></div>
+
+    <div class="info_espace_auteur">
+        <p class="item_info_espace_auteur">
+            *Nom :
+				<input type="text" name="le_nom" placeholder="Nom" id="nom" required />
+        </p>
+        <p class="item_info_espace_auteur">
+            * Prénom :
+            <input type="text" name="le_prenom" placeholder="Prénom" id="prenom" required />
+        </p>	
+        <p class="item_info_espace_auteur">
+            * E-mail :
+            <input type="text" name="email" id="mail" required />
+        </p>			
+        <p class="item_info_espace_auteur">
+            *Date de naissance :
+            <input type="text" name="le_prenom" id="birth" required/>
+        </p>
+        <p class="item_info_espace_auteur">
+            Adresse :
+            <input type="text" name="adresse" id="adresse" />
+        </p>	
+        <p class="item_info_espace_auteur">
+            *Ville :
+            <input type="text" name="ville" id="ville" required/>
+        </p>		
+        <p class="item_info_espace_auteur">
+            *Code postal :
+            <input type="text" name="postal" id="postal" required/>
+        </p>
+        <p class="item_info_espace_auteur">
+            <span>
+                <input type="radio" name="sexe" value="homme" /> Homme
+                <input type="radio" name="sexe" value="femme" /> Femme
+                <input type="radio" name="sexe" value="autre" /> Autre
+            </span>
+        </p>
+        <p class="item_info_espace_auteur">
+                <img src="images/auteur.jpg" alt="Votre photo">
+        </p>
+        <p class="item_info_espace_auteur">
+            <p>
+            <input type="submit" value=" Modifier " id="button1" /> <!--Envoie à la BDD-->
+        </p>
+    </div>
+    <div class="bio_espace_auteur">
+        <textarea placeholder=" *Votre biographie" rows="20" cols="110" ></textarea>
+    </div>
+
+    <div class="subtitle_espace_auteur subespaceauteur2"><h3>Vos livres en compétition</h3></div>
+
+    <div class="containerbook_auteur">
+        <ul class="book_line_list">
+
+            <li class="book_item_auteur">
+                <a href="#"><img class="photo" src="images/livre.png" alt="Couverture Titre"></a>
+                <p class="name"><a href="#">TITRE</a></p>
+                <p class="name"><a href="#">Auteur</a></p>
+            </li>
+            <li class="book_item_auteur">
+                <a href="#"><img class="photo" src="images/livre.png" alt="Couverture Titre"></a>
+                <p class="name"><a href="#">TITRE</a></p>
+                <p class="name"><a href="#">Auteur</a></p>
+            </li>
+            <li class="book_item_auteur">
+                <a href="#"><img class="photo" src="images/livre.png" alt="Couverture Titre"></a>
+                <p class="name"><a href="#">TITRE</a></p>
+                <p class="name"><a href="#">Auteur</a></p>
+            </li>
+            <li class="book_item_auteur">
+                <a href="#"><img class="photo" src="images/livre.png" alt="Couverture Titre"></a>
+                <p class="name"><a href="#">TITRE</a></p>
+                <p class="name"><a href="#">Auteur</a></p>
+            </li>
+            <li class="book_item_auteur">
+                <a href="#"><img class="photo" src="images/livre.png" alt="Couverture Titre"></a>
+                <p class="name"><a href="#">TITRE</a></p>
+                <p class="name"><a href="#">Auteur</a></p>
+            </li>
+            <li class="book_item_auteur">
+                <a href="#"><img class="photo" src="images/livre.png" alt="Couverture Titre"></a>
+                <p class="name"><a href="#">TITRE</a></p>
+                <p class="name"><a href="#">Auteur</a></p>
+            </li>
+            
+        </ul>
+    </div>
+
+    <div class="subtitle_espace_auteur subespaceauteur3"><h3>Ajouter un autre livre</h3></div>
+
+    <div class="livre_espace_auteur">
+        <p class="item_livre_espace_auteur">
+            *Auteur (nom & prénom) :
+				<input type="text" name="auteur" placeholder="" id="auteur" required />
+        </p>	
+        <p class="item_livre_espace_auteur">
+            * Titre :
+            <input type="text" name="titre" id="titre" required />
+        </p>			
+        <p class="item_livre_espace_auteur">
+            *ISBN:
+            <input type="text" name="isbn" id="isbn" required/>
+        </p>
+        <p class="item_livre_espace_auteur">
+            *Maison d'édition :
+            <input type="text" name="edition" id="edition" />
+        </p>	
+        <p class="item_livre_espace_auteur">
+            *Catégorie :
+            <input type="text" name="categ" id="categ" required/>
+        </p>		
+        <p class="item_livre_espace_auteur">
+            <span>
+                <input type="radio" name="sexe" value="homme" /> Homme
+                <input type="radio" name="sexe" value="femme" /> Femme
+                <input type="radio" name="sexe" value="autre" /> Autre
+            </span>
+        </p>
+        <p class="item_livre_espace_auteur">
+            <p>
+            <input type="submit" value=" Téléversez couverture " id="button2" />
+        </p>
+    </div>
+
+    <div class="synopsis_espace_auteur">
+        <textarea placeholder=" *Synopsis de votre livre " rows="20" cols="110" ></textarea>
+    </div>
+
+    <div class="reglement_espace_auteur">
+        <input type="radio" name="sexe" value="homme" required/> Je déclare avoir pris connaissance du <a href="">réglement</a> et accepter celui-ci.
+    </div>
+
+    <div class="button_espace_auteur">
+        <p>
+            <input type="submit" value="Valider" id="button3" /> <!--Envoie à BDD et notification à l'administrateur-->
+            <input type="reset" value="Annuler" id="button4" /> 
+        </p>
+    </div>
+    <footer>
+        <p>Site Biblio - Guillaume BURGNIES - 2021</p>
+    </footer>
+    <script src="assets/JS/menu.js"></script> 
+</body>
+</html>
